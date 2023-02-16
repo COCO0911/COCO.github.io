@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaxuan's Personal website</title>
     <style>
-        @media (max-width: 600px) {
-            .grid-container {
-                border: none;
-            }
-        }
-
-        h1{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-        }
         .grid-container {
             display: grid;
             justify-content: center;
@@ -32,26 +19,6 @@
             grid-gap: 10px;
 
         }
-        .header{
-            grid-area: header;
-            border: 1px solid black;
-            background-color: rgba(255, 215, 235, 0.278);
-        }
-
-        .left-side-bar{
-            grid-area: left-side-bar;
-            border: 1px solid black;
-            background-color: rgba(255, 215, 235, 0.278);
-            align-items: center;
-            justify-content: center;
-           
-        }
-
-        .right-side-bar{
-            grid-area: right-side-bar;
-            border: 1px solid black;
-            background-color: rgba(255, 215, 235, 0.278);
-        }
 
         .main{
             grid-area: main;
@@ -63,14 +30,47 @@
             padding: 10px;
         }
 
-        .footer{
-            grid-area: footer;
-            border: 1px solid black;
+        @media screen and (max-width: 600px) {
+            .navbar-container {
+                height: auto;
+                flex-direction: column;
+                padding: 1rem;
+            }
+  
+            .navbar-links {
+                position: static;
+                transform: none;
+                flex-direction: row;
+            }
+            .main{
+            grid-area: main;
             background-color: rgba(255, 215, 235, 0.278);
-            padding: 30px;
+            display: flex;
             align-items: center;
-            
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
         }
+        }
+
+        h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .main{
+            grid-area: main;
+            background-color: rgba(255, 215, 235, 0.278);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+        }
+
         .box{
             width: 550px;
             height: 350px;
@@ -93,52 +93,220 @@
         }
         
 
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            margin: 20px;
+            font-size: 18px;
+            color: #337ab7;
+            text-decoration: none;
+        }
+        .word {
+            font-size: 36px;
+            color: #337ab7;
+            margin-right: 10px;
+        }
+
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #e7a8a8;
+           
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .navbar-logo {
+            color: #fff;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar-links li {
+            margin-right: 2rem;
+        }
+
+        .navbar-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-links li a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .navbar-links li a.active {
+            background-color: #fff;
+            color: #333;
+        }
+
+        body {
+            
+        } 
+
+        body {
+            padding-top: 80px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 30px;
+      }
+      .project {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        background-color: #f2f2f2;
+        text-align: left;
+        padding: 20px;
+        margin: 20px;
+      }
+      h2 {
+        color: #333;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 16px;
+        color: #666;
+        margin: 10px 0;
+      }
+      a {
+        color: #337ab7;
+        text-decoration: none;
+      }
+
+      /* Add some styles for the blog post section */
+      .blog-post {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+      
+      /* Add some styles for the blog post title */
+      .blog-post h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      /* Add some styles for the blog post content */
+      .blog-post p {
+        margin-bottom: 20px;
+      }
+    
+
+
     </style>
 </head>
     
 <body>
-    <div class = "grid-container"> 
-        <div class = "header"><h1>Yaxuan's website</h1></div>
-
-        <div class = "left-side-bar"> 
-            <div class = "box-container">
-                <div class = "box">
-                <ul>
-                    <li><a href="https://liyaxuan.sites.northeastern.edu/">About Me</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="information.html">Contact</a></li>
-                    <li><a href="blog.html">My Blog</a></li>
-                </ul>  
-                </div>
-            </div>
+    <div class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="navbar-logo">Yaxuan Li's Website</a>
+          <ul class="navbar-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href = "project.html">Project</a></li>
+            <li><a href="blog.html">My Blog</a></li>
+            <li><a href="https://liyaxuan.sites.northeastern.edu/">About Me</a></li>
+            <li><a href="information.html">Contact</a></li>
+          </ul>
         </div>
-
-        <div class = "main">
-            <div class = "box-container">
-                
-                <img decoding="async" width="200px" height="200px" src="https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2.jpg" alt="" class="wp-image-4658 size-full" srcset="https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2.jpg 785w, https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2-283x300.jpg 283w, https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2-768x814.jpg 768w" sizes="(max-width: 250px) 100vw, 250px">
-            <div class = "box">
-                <div class="wp-block-media-text is-stacked-on-mobile nuft-pattern nuft-profile" style="grid-template-columns:22% auto"><div class="wp-block-media-text__content">
-                    <h2 class="mt-0 pt-0">About me:</h2>
-                    </div>
-                    <p>I am a student from Northeastern University majoring in Master of Science in computer science degree with strong programming, and problem-solving skills. I have a great interest in Java for object-oriented programming, HTML, CSS, and JavaScript for Web development, and MySQL for relational databases, and mobile development such as Android. Familiar with Java, python as well as C. Also, I had a wide range of software development and project experience including object-oriented design, full-stack web application, and mobile application development with Java, React, Spring and Hibernate. &nbsp;</p>
-                </div> 
-            </div>       
-            </div> 
-        </div>
-
-        <div class = "right-side-bar">
-            <div class= "box-container">
-                <div class = "box"></div>
-            </div>  
-        </div>
-
-        <div class = "footer">
-            <p>Copyright © 2023 Yaxuan Li's Website</p>
-        </div>
-          
     </div>
 
+
+
+    <div class = "main">
+        <div class = "box-container">
+            
+            <img decoding="async" width="200px" height="200px" src="https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2.jpg" alt="" class="wp-image-4658 size-full" srcset="https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2.jpg 785w, https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2-283x300.jpg 283w, https://liyaxuan.sites.northeastern.edu/files/2022/12/IMG_9457-2-768x814.jpg 768w" sizes="(max-width: 250px) 100vw, 250px">
+        <div class = "box">
+            <div class="wp-block-media-text is-stacked-on-mobile nuft-pattern nuft-profile" style="grid-template-columns:22% auto"><div class="wp-block-media-text__content">
+                <h2 class="mt-0 pt-0">About me:</h2>
+                </div>
+                <p>I am a student from Northeastern University majoring in Master of Science in computer science degree with strong programming, and problem-solving skills. I have a great interest in Java for object-oriented programming, HTML, CSS, and JavaScript for Web development, and MySQL for relational databases, and mobile development such as Android. Familiar with Java, python as well as C. Also, I had a wide range of software development and project experience including object-oriented design, full-stack web application, and mobile application development with Java, React, Spring and Hibernate. &nbsp;</p>
+            </div> 
+        </div>       
+        </div> 
+    </div>
+    
+
+    <h1>My Projects</h1>
+    <div class="project">
+      <h2>StayBooking</h2>
+      <p>An Online Vacation Stay Booking Web Application</p>
+      <p><a href="https://github.com/COCO0911/staybooking-project">View Project</a></p>
+    </div>
+    <div class="project">
+      <h2>StreamBooster</h2>
+      <p>A Personalized Video Recommendation System</p>
+      <p><a href="https://github.com/COCO0911/introduction">View Project</a></p>
+    </div>
+
+    <h1>My Personal Blog</h1>
+    <p>A place to share my thoughts and experiences.</p>
+     </header>
+  
+    <section class="blog-post">
+        <h3>My First Blog Post</h3>
+        <p>Welcome to my personal blog! This is my first blog post and I'm excited to share my thoughts and experiences.</p>
+        <p>My hobby: 
+            <span>travelling</span> 
+            <span>Playing Piano</span>
+        </p>
+        </p>
+     </section>
+
+
+    <h1>Get in Touch</h1>
+    <a href="mailto:your.email@example.com">
+      <i class="fa fa-envelope"></i>
+      li.yaxu@northeastern.edu
+    </a>
+    <a href="https://github.com/COCO0911">
+      <i class="fa fa-github"></i>
+      Github
+    </a>
+    <a href="https://www.linkedin.com/in/yaxuanli1999">
+      <i class="fa fa-linkedin"></i>
+      LinkedIn
+    </a>
+    <a href="https://instagram.com/yourusername">
+      <word class="fa fa-instagram"></word>
+      Instagram
+    </a>
+
+    <div>
+        <p>Copyright © 2023 Yaxuan Li's Website</p>
+    </div>
 </body>
 
 </html>
